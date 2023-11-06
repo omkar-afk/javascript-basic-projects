@@ -2,11 +2,11 @@
 let count = 0;
 // select value and buttons
 const value = document.querySelector("#value");
-const btns = document.querySelectorAll(".btn");
+const btns = document.querySelectorAll(".btn");//gives array of btn
 
 btns.forEach(function (btn) {
   btn.addEventListener("click", function (e) {
-    const styles = e.currentTarget.classList;
+    const styles = e.target.classList;
     if (styles.contains("decrease")) {
       count--;
     } else if (styles.contains("increase")) {
